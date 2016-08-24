@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manitas Unidas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2.0/dist/flickity.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Rasa';
+        @import 'https://fonts.googleapis.com/css?family=Raleway';
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        
+        body {
+            padding-top: 30px;
+            /* Margin bottom by footer height */
+            margin-bottom: 235px;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top: 5px solid #E92A6F;
+            /* Set the fixed height of the footer here */
+            height: 185px;
+            background-color: #25AAE3;
+            -webkit-box-sizing: border-box;
+            /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;
+            /* Firefox, other Gecko */
+            box-sizing: border-box;
+            /* Opera/IE 8+ */
+        }
+        
+        .footer .logo {
+            max-height: 100px;
+        }
+        
+        .print {
+            border: 1px solid red;
+        }
+        
+        .raleway {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .rasa {
+            font-family: 'Rasa', serif;
+        }
+        /*        estilos textos y etiquetas basicas*/
+        
+        h1.titulo {
+            color: #25AAE3;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.3em;
+            line-height: auto;
+            padding: 0;
+            vertical-align: middle;
+            font-weight: lighter;
+        }
+        h1.titulo span {
+background-color: #fff;
+            padding: 0 20px;
+        }
+        
+        h1.titulo.decor {
+            background-image: url(img/magenta.png);
+            background-size: 100% 2px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 25px 0 !important;
+        }
+        
+        .footer h1.titulo {
+            color: #fff;
+            margin: 8px auto 10px;
+            font-size: 2em;
+            font-weight: 100;
+        }
+        
+        p.parrafo {
+            font-size: 1.6em;
+            line-height: 1.6em;
+            vertical-align: middle;
+            color: #4d4d4d;
+            text-align: left;
+            padding-right: 10px;
+        }
+        /*estilo menu*/
+        
+        .menu {
+            height: 120px;
+            margin-bottom: 15px;
+        }
+        
+        .menu img {
+            max-height: 100px;
+            margin: 10px auto;
+            padding: 0;
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            float: right;
+            font-size: 1.4em;
+            display: block;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .menu li {
+            float: left;
+            padding: 10px 15px;
+            border: solid #E92A6F;
+            color: #25AAE3;
+            border-bottom: solid transparent;
+            border-width: 0 1px 2px 0;
+            line-height: 1.4em;
+            height: auto;
+            display: block;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: capitalize;
+            transition: border 0.3s ease;
+        }
+        
+        .menu li:last-child {
+            border-width: 0 0 2px 0;
+        }
+        
+        .vcenter {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .border-cyan:hover {
+            border-bottom: solid 2px #25AAE3 !important;
+        }
+        
+        .border-magenta:hover {
+            border-bottom: solid 2px #E92A6F !important;
+        }
+        /*estilo carusel*/
+        
+        .carousel {
+            height: 400px;
+        }
+        
+        .carousel-cell {
+            width: 100%;
+            height: 100%
+        }
+        
+        .carousel-cell img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .parent {
+            display: table;
+            table-layout: fixed;
+        }
+        
+        .child {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            float: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!--menu-->
+        <div class="row menu">
+            <div class="col-md-3">
+                <img class="center-block img-responsive" src="img/manitas_wt.svg">
+            </div>
+            <div class="col-md-9 vcenter">
+                <ul>
+                    <li class="border-cyan">inicio</li>
+                    <li class="border-magenta">nosotros</li>
+                    <li class="border-cyan">noticias</li>
+                    <li class="border-magenta">como ayudar</li>
+                    <li class="border-cyan">multimedia</li>
+                    <li class="border-magenta">contacto</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--carrusel-->
+        <div class="carousel row" data-flickity>
+            <div class="carousel-cell">
+                <img src="img/portada.jpg">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/img1.jpg">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/img2.jpg">
+            </div>
+        </div>
+        <h1 class="titulo raleway decor"><span>Manitas Unidas I.A.P.</span></h1>
+        <div class="row parent">
+            <div class="col-md-7 col-sm-12 child">
+                <p class="rasa parrafo">Surge de la iniciativa de nuestro presidente el Lic. Manuel Gallardo Inzunza, quien al contar con el padecimiento de Glaucoma, cuenta con la sensibilidad y conocimiento de las grandes necesidades que presentan las personas con capacidades diferentes, y toma el reto de realizar un esfuerzo colectivo con la finalidad de disminuirlas o aliviarlas. </p>
+            </div>
+
+            <div class="col-md-5 col-sm-12 child"><img class="center-block" src="http://placehold.it/350x300"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <h1 class="titulo raleway">Contacto</h1>
+        <div class="col-md-4 print">
+            <img src="img/japi.svg" class=" center-block logo img-responsive">
+        </div>
+        <div class="col-md-4">
+            Frida Kahlo 2411 Nte., Fracc. Rincón Alameda, Culiacán, Sinaloa, México. Tels: (667) 715 2166 | 715-1714 Lada sin costo: 01 800 509 1985
+        </div>
+        <div class="col-md-4">
+            facebok twiter correo
+        </div>
+        <p class="col-md-12 text-center">© 2016 Manitas Unidas I.A.P.</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://npmcdn.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <script>
+        $('.carousel').flickity({
+            // options
+            cellAlign: 'center',
+            wrapAround: true,
+            pageDots: false
+        });
+
+    </script>
+</body>
+
+</html>
