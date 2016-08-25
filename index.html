@@ -7,14 +7,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Manitas Unidas</title>
+    <script src="https://use.fontawesome.com/2b4fddbc07.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://npmcdn.com/flickity@2.0/dist/flickity.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <style>
         @import 'https://fonts.googleapis.com/css?family=Rasa';
         @import 'https://fonts.googleapis.com/css?family=Raleway';
@@ -32,10 +33,11 @@
         .footer {
             position: absolute;
             bottom: 0;
+            padding: 0;
             width: 100%;
             border-top: 5px solid #E92A6F;
             /* Set the fixed height of the footer here */
-            height: 185px;
+            /*            max-height: 185px;*/
             background-color: #25AAE3;
             -webkit-box-sizing: border-box;
             /* Safari/Chrome, other WebKit */
@@ -43,10 +45,36 @@
             /* Firefox, other Gecko */
             box-sizing: border-box;
             /* Opera/IE 8+ */
+            -webkit-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
         }
         
         .footer .logo {
-            max-height: 100px;
+            max-height: 65px;
+            margin-bottom: 10px;
+        }
+        .socials p{
+            color:#fff;
+            font-size: 1.2em;
+        }
+        
+        .footer address {
+            text-align: center;
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1em;
+            margin: 0 0 5px;
+        }
+        
+        p.copyright {
+            /*            background: #E92A6F;*/
+            color: #fff;
+            margin: 0;
+            padding: 5px 0;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bolder;
+            font-size: 0.9em;
         }
         
         .print {
@@ -72,8 +100,9 @@
             vertical-align: middle;
             font-weight: lighter;
         }
+        
         h1.titulo span {
-background-color: #fff;
+            background-color: #fff;
             padding: 0 20px;
         }
         
@@ -231,16 +260,23 @@ background-color: #fff;
     </div>
     <div class="footer">
         <h1 class="titulo raleway">Contacto</h1>
-        <div class="col-md-4 print">
+        <div class="col-md-4">
             <img src="img/japi.svg" class=" center-block logo img-responsive">
         </div>
         <div class="col-md-4">
-            Frida Kahlo 2411 Nte., Fracc. Rincón Alameda, Culiacán, Sinaloa, México. Tels: (667) 715 2166 | 715-1714 Lada sin costo: 01 800 509 1985
+            <address>
+                Frida Kahlo 2411 Nte., Fracc. Rincón Alameda,<br>
+                Culiacán, Sinaloa, México.<br>
+                <abbr title="Telefonos"><strong>Tels:</strong></abbr> (667) 715 2166 | 715-1714<br>
+                <strong>Lada sin costo:</strong> 01 800 509 1985
+            </address>
         </div>
-        <div class="col-md-4">
-            facebok twiter correo
+        <div class="col-md-4 socials">
+            <p><i class="fa fa-envelope-square fa-lg"></i> info@manitasunidas.org.mx</p>
+            <p><i class="fa fa-facebook-official fa-lg"></i> Manitas Unidas IAP</p>
+            <p><i class="fa fa-twitter-square fa-lg"></i> @manitasunidasIAPs</p>
         </div>
-        <p class="col-md-12 text-center">© 2016 Manitas Unidas I.A.P.</p>
+        <p class="col-md-12 text-center copyright">© 2016 Manitas Unidas I.A.P.</p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
