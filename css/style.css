@@ -1,0 +1,218 @@
+@import 'https://fonts.googleapis.com/css?family=Rasa';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    padding-top: 30px;
+    /* Margin bottom by footer height */
+    margin-bottom: 235px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    border-top: 5px solid #E92A6F;
+    /* Set the fixed height of the footer here */
+    /*            max-height: 185px;*/
+    background-color: #25AAE3;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    -webkit-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+.footer .logo {
+    max-height: 65px;
+    margin-bottom: 10px;
+}
+.socials p {
+    color: #fff;
+    font-size: 1.2em;
+}
+.footer address {
+    text-align: center;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    margin: 0 0 5px;
+}
+p.copyright {
+    /*            background: #E92A6F;*/
+    color: #fff;
+    margin: 0;
+    padding: 5px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+.print {
+    border: 1px solid red;
+}
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+.rasa {
+    font-family: 'Rasa', serif;
+}
+
+/*        estilos textos y etiquetas basicas*/
+
+h1.titulo {
+    color: #25AAE3;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.3em;
+    padding: 0;
+    vertical-align: middle;
+    font-weight: lighter;
+    font-family: 'Raleway', sans-serif;
+}
+h1.titulo span {
+    background-color: #fff;
+    padding: 0 20px;
+}
+h1.titulo.decor {
+    background-image: url(../img/magenta.png);
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 25px 0 !important;
+}
+.footer h1.titulo {
+    color: #fff;
+    margin: 8px auto 10px;
+    font-size: 2em;
+    font-weight: 100;
+}
+p.parrafo {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    vertical-align: middle;
+    color: #4d4d4d;
+}
+
+/*estilo menu*/
+
+.menu {
+    height: 120px;
+}
+.menu img {
+    max-height: 100px;
+    margin: 10px auto;
+    padding: 0;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    font-size: 1.4em;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+}
+.menu li {
+    float: left;
+    padding: 10px 15px;
+    border: solid #E92A6F;
+    color: #25AAE3;
+    border-bottom: solid transparent;
+    border-width: 0 1px 2px 0;
+    line-height: 1.4em;
+    height: auto;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    transition: border 0.3s ease;
+    cursor: pointer;
+}
+.menu li:last-child {
+    border-width: 0 0 2px 0;
+}
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+.vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.border-cyan:hover {
+    border-bottom: solid 2px #25AAE3 !important;
+}
+.border-magenta:hover {
+    border-bottom: solid 2px #E92A6F !important;
+}
+
+/*estilo carusel*/
+
+.carousel {
+    height: 400px;
+}
+.carousel-cell {
+    width: 100%;
+    height: 100%
+}
+.carousel-cell img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.parent {
+    display: table;
+    table-layout: fixed;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.valores {
+    width: 33.3%;
+    margin: auto;
+    /* Magic! */
+    text-align: center;
+    padding: 5px;
+}
+.valores p {
+    text-align: center;
+    font-family: 'Rasa', serif;
+    font-weight: bolder;
+    color: #25AAE3;
+    font-size: 1.6em;
+    line-height: 1.5em;
+    vertical-align: middle;
+}
+.valores img {
+    margin: auto;
+    border-radius: 100px;
+}
+
+.noticia img {
+    margin: 10px auto;
+}
+.noticia h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #E92A6F;
+}
+.noticia p {
+    font-family: 'Rasa', serif;
+    font-weight: bolder;
+    color: #4d4d4d;
+    font-size: 1.3em;
+    font-weight: lighter;
+}
