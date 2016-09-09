@@ -7,7 +7,7 @@ html {
 body {
     padding-top: 30px;
     /* Margin bottom by footer height */
-    margin-bottom: 235px;
+    margin-bottom: 150px;
 }
 .footer {
     position: absolute;
@@ -122,7 +122,7 @@ p.parrafo {
     display: block;
     font-family: 'Raleway', sans-serif;
 }
-.menu li {
+.menu a{
     float: left;
     padding: 10px 15px;
     border: solid #E92A6F;
@@ -137,13 +137,14 @@ p.parrafo {
     text-transform: capitalize;
     transition: border 0.3s ease;
     cursor: pointer;
+    text-decoration: inherit;
 }
-.menu li:last-child {
+.menu a :last-child {
     border-width: 0 0 2px 0;
 }
-.menu li a {
-    text-decoration: none;
-    color: inherit;
+
+.menu a:last-child {
+    border-width: 0 0 2px 0;
 }
 .vcenter {
     position: relative;
@@ -283,7 +284,7 @@ p.parrafo {
 }
 
 /*******************
-******contacto*******
+******contacto******
 *******************/
 
 .google-maps {
@@ -303,4 +304,40 @@ p.parrafo {
 input,
 button {
     font-family: 'Raleway', sans-serif;
+}
+
+/*******************
+*****publicacion****
+*******************/
+
+.publicacion h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: #25AAE3;
+    font-size: 3em;
+    text-align: center;
+}
+.publicacion h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: #E92A6F;
+    font-size: 1.2em;
+    text-align: center;
+}
+.publicacion h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: #E92A6F;
+    font-size: 1.8em;
+    text-align: center;
+}
+.publicacion img {
+    margin: 10px;
+}
+.publicacion p {
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+    color: #4d4d4d;
+    font-size: 1.2em;
+    font-weight: lighter;
 }
