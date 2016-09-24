@@ -10,18 +10,22 @@
     <title>
         Manitas Unidas -
         <?php
-        if(isset($title)){
-            echo $title;
+        if(isset($titulo)){
+            echo $titulo;
         }else
-        echo'<cms:if k_template_is_clonable>
-            <cms:if k_is_page>
-                <cms:show k_page_title />
-            <cms:else />
-                <cms:show k_template_title />
-            </cms:if>
-        <cms:else />
-            <cms:show k_template_title />
-        </cms:if>';
+        echo'   <cms:if k_template_is_clonable>
+                    <cms:if k_is_page>
+                        <cms:show k_page_title />
+                    <cms:else />
+                        <cms:if k_is_folder>
+                           <cms:show k_template_title />: <cms:show k_folder_title />
+                        <cms:else />
+                            <cms:show k_template_title />
+                        </cms:if>
+                    </cms:if>
+                <cms:else />
+                    <cms:show k_template_title />
+                </cms:if>';
         ?>
     </title>
     <?php require_once 'styles.php'; ?>

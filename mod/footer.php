@@ -1,8 +1,8 @@
 <div class="footer">
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <img src="img/japi.svg" class=" center-block logo img-responsive">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <address>
                 Frida Kahlo 2411 Nte., Fracc. Rincón Alameda,<br>
                 Culiacán, Sinaloa, México.<br>
@@ -10,7 +10,7 @@
                 <strong>Lada sin costo:</strong> 01 800 509 1985
             </address>
     </div>
-    <div class="col-md-4 socials">
+    <div class="col-md-4 col-sm-4 socials">
         <p><i class="fa fa-envelope-square fa-lg"></i> info@manitasunidas.org.mx</p>
         <p><i class="fa fa-facebook-official fa-lg"></i> Manitas Unidas IAP</p>
         <p><i class="fa fa-twitter-square fa-lg"></i> @manitasunidasIAP</p>

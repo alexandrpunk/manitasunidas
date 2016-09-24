@@ -17,10 +17,10 @@
                     <img src="img/img2.jpg">
                 </div>
             </div>
-            <h1 class="titulo raleway decor"><span>Manitas Unidas I.A.P.</span></h1>
+            <h1 class="titulo decor"><span>Manitas Unidas I.A.P.</span></h1>
             <div class="row parent">
                 <div class="col-md-7 col-sm-12 child">
-                    <p class="rasa parrafo" style="margin-left:40px;">
+                    <p class="parrafo" >
                         <cms:editable name='descripcion' label='Descripcion corta de manitas unidas' type='nicedit'>
                             Surge de la iniciativa de nuestro presidente el Lic. Manuel Gallardo Inzunza, quien al contar con el padecimiento de Glaucoma, cuenta con la sensibilidad y conocimiento de las grandes necesidades que presentan las personas con capacidades diferentes, y toma el reto de realizar un esfuerzo colectivo con la finalidad de disminuirlas o aliviarlas.
                         </cms:editable>
