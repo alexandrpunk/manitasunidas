@@ -10,14 +10,14 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xml:space="preserve"
-   width="21.107155mm"
-   height="14.136321mm"
+   width="56.444447mm"
+   height="56.444447mm"
    version="1.1"
    style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-   viewBox="0 0 570.89038 382.34853"
+   viewBox="0 0 1526.6668 1526.6667"
    id="svg2"
    inkscape:version="0.91 r"
-   sodipodi:docname="Programa de voluntarios.svg"><metadata
+   sodipodi:docname="voluntarios.svg"><metadata
      id="metadata27"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
@@ -29,19 +29,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="997"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
      id="namedview25"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="7.4167646"
-     inkscape:cx="51.135133"
-     inkscape:cy="33.186116"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:zoom="1.5909903"
+     inkscape:cx="64.789317"
+     inkscape:cy="101.02592"
+     inkscape:window-x="1280"
+     inkscape:window-y="30"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" /><defs
      id="defs4"><style
@@ -49,9 +49,14 @@
        id="style6"><![CDATA[
     .fil1 {fill:#FEFEFE}
     .fil0 {fill:#E92A6F}
-   ]]></style></defs><g
+   ]]></style></defs><circle
+     style="fill:#e92a6f;fill-opacity:1;stroke:none;stroke-width:0.80000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path4552"
+     cx="763.33337"
+     cy="763.33337"
+     r="763.33337" /><g
      id="g3370"
-     transform="translate(-64.685483,-156.90796)"><path
+     transform="matrix(2.0056389,0,0,2.0056389,61.097692,65.206112)"><path
        style="fill:#fefefe"
        inkscape:connector-curvature="0"
        id="path13"

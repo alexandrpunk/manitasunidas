@@ -2,5 +2,7 @@ $('.carousel').flickity({
     // options
     cellAlign: 'center',
     wrapAround: true,
-    pageDots: false
+    pageDots: false,
+    autoPlay: true,
+    autoPlay: 2000
 });

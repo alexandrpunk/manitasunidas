@@ -1,29 +1,48 @@
 <?php
-$titulo="Contacto";
 require_once 'cms/cms.php';
+require_once 'inc/comentar.php';
+$titulo="Contacto";
 require_once 'mod/head.php';
 ?>
 </head>
 <body>
     <div class="container">
-        <?php require_once 'mod/menu.php';?>
+        <?php require_once 'mod/menu.php'; ?>
         <div class="row">
-            <h1 class="titulo raleway decor"><span>Contactanos</span></h1>
+            <h1 class="titulo decor"><span>Contactanos</span></h1>
             <div class="col-md-6">
-                <form>
+            <?php
+                if(!empty($_SESSION ['errors'])){
+                    echo '
+                    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>'.nl2br($_SESSION ['errors']).'</strong>
+                    </div>';
+                }
+            ?>
+                <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>"  method="POST" class="form-manitas" data-toggle="validator" role="form">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
                         <label for="comentario">Comentario</label>
-                        <textarea id="comentario" class="form-control" rows="8"></textarea>
+                        <textarea name="comentario" id="comentario" class="form-control" rows="8" required></textarea>
                     </div>
-                    <div class="text-center"><button type="submit" class="btn btn-lg btn-primary">Enviar</button></div>
+                    <div class="form-group">
+                        <label for="captcha" data-toggle="tooltip" data-placement="right" title="Introdusca el codigo de seguridad de letras y numeros que aparecen en la siguiente imagen">Introduzca el código de verificación:</label>
+                        <p><img src="inc/captcha_code_file.php?rand=<?php echo rand(); ?>"
+                        id="captchaimg" ></p>
+                        <input class="form-control" id="captcha" name="captcha" type="text" style="width:200px;" required autocomplete="off">
+                        <small>¿No puedes leer la imagen? Haz click <a href='javascript: refreshCaptcha();'>aquí</a> para refrescarla</small> <hr/>
+                    </div>
+                    <div class="text-center"><button type="submit" class="btn btn-lg btn-info btn-gal">Enviar</button></div>
                 </form>
             </div>
             <div class="col-md-6">
@@ -34,7 +53,13 @@ require_once 'mod/head.php';
         </div>
     </div>
     <?php require_once 'mod/footer.php';?>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+    <script>
+        function refreshCaptcha() {
+            var img = document.images['captchaimg'];
+            img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
+        }
+    </script>
 </body>
-
 </html>
 <?php COUCH::invoke(); ?>

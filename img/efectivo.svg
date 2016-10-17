@@ -10,14 +10,14 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xml:space="preserve"
-   width="18.094919mm"
-   height="16.376032mm"
+   width="56.444447mm"
+   height="56.444447mm"
    version="1.1"
    style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-   viewBox="0 0 1790.2572 1620.1956"
+   viewBox="0 0 5584.4448 5584.4447"
    id="svg2"
    inkscape:version="0.91 r"
-   sodipodi:docname="Donativo en Efectivo.svg"><metadata
+   sodipodi:docname="efectivo.svg"><metadata
      id="metadata21"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
@@ -29,19 +29,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="997"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
      id="namedview19"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="7.4167646"
-     inkscape:cx="33.428605"
-     inkscape:cy="30.532202"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:zoom="1.8541912"
+     inkscape:cx="6.1007564"
+     inkscape:cy="76.478205"
+     inkscape:window-x="1280"
+     inkscape:window-y="30"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" /><defs
      id="defs4"><style
@@ -49,9 +49,14 @@
        id="style6"><![CDATA[
     .fil1 {fill:#FEFEFE}
     .fil0 {fill:#25AAE3}
-   ]]></style></defs><g
+   ]]></style></defs><circle
+     style="fill:#25aae3;fill-opacity:1;stroke:none;stroke-width:0.80000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path4141"
+     cx="2792.2224"
+     cy="2792.2224"
+     r="2792.2224" /><g
      id="Capa_x0020_1"
-     transform="translate(-468.18165,-345.4774)"><metadata
+     transform="matrix(1.871612,0,0,1.871612,240.63462,629.43388)"><metadata
        id="CorelCorpID_0Corel-Layer" /><g
        id="_723691376"><path
          class="fil1"

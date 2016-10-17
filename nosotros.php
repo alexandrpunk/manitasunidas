@@ -6,17 +6,16 @@
     <div class="container">
         <?php require_once 'mod/menu.php';?>
         <h1 class="titulo decor"><span>Nosotros</span></h1>
-        <div class="row parent">
-            <div class="col-md-7 col-sm-12 child">
+        <div class="row vertical-align">
+            <div class="vcenter col-md-7 col-sm-12">
                 <p class="parrafo">
                      <cms:editable name='nosotros' label='Editar la historia de nostros' type='nicedit'>
                         A lo largo de nuestra historia se han sumado un gran número de personas a nuestros propósitos, desde aquellas que lideran grandes empresas hasta quienes poseen un alto nivel de conocimientos en materias de salud y tecnología, sin olvidarnos del diverso cuerpo de trabajadores voluntarios que, sumando esfuerzos, hacen posible que nos encontremos cerca de la conclusión del desarrollo de dispositivos, volviéndonos capaces de entregarlos a la comunidad de personas con capacidades diferentes, necesitada de atención y tecnología adaptable a sus circunstancias, lo antes posible.
                     </cms:editable>
                 </p>
             </div>
-
-            <div class="col-md-5 col-sm-12 child">
-                <img class="img-responsive center-block" src="http://placehold.it/350/25AAE3/ffffff">
+            <div class="vcenter col-md-5 col-sm-12">
+                <img class="img-responsive img-thumbnail center-block" src="<cms:editable name='imagen_nosotros' label='Imagen que va junto al texto de nosotros' type='image'></cms:editable>">
             </div>
         </div>
         <div class="row">

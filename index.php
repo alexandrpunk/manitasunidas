@@ -7,19 +7,18 @@
         <?php require_once 'mod/menu.php';?>
             <!--carrusel-->
             <div class="carousel row" data-flickity>
-                <div class="carousel-cell">
-                    <img src="img/portada.jpg">
-                </div>
-                <div class="carousel-cell">
-                    <img src="img/img1.jpg">
-                </div>
-                <div class="carousel-cell">
-                    <img src="img/img2.jpg">
-                </div>
+                <cms:pages masterpage='noticias.php' folder='importantes' startcount='1' limit='5'>
+                    <div class="carousel-cell">
+                        <a href="<cms:show k_page_link />">
+                            <img src="<cms:show publicacion_image />">
+                            <h4><cms:show k_page_title /></h4>
+                        </a>
+                    </div>
+                </cms:pages>
             </div>
             <h1 class="titulo decor"><span>Manitas Unidas I.A.P.</span></h1>
-            <div class="row parent">
-                <div class="col-md-7 col-sm-12 child">
+            <div class="row vertical-align">
+                <div class="vcenter col-md-7">
                     <p class="parrafo" >
                         <cms:editable name='descripcion' label='Descripcion corta de manitas unidas' type='nicedit'>
                             Surge de la iniciativa de nuestro presidente el Lic. Manuel Gallardo Inzunza, quien al contar con el padecimiento de Glaucoma, cuenta con la sensibilidad y conocimiento de las grandes necesidades que presentan las personas con capacidades diferentes, y toma el reto de realizar un esfuerzo colectivo con la finalidad de disminuirlas o aliviarlas.
@@ -27,7 +26,7 @@
                     </p>
                 </div>
 
-                <div class="col-md-5 col-sm-12 child">
+                <div class="vcenter col-md-5">
                     <img class="img-responsive img-thumbnail center-block" src="<cms:editable name='imagen_descripcion' label='Imagen que va junto a la descripcion' type='image'></cms:editable>">
                 </div>
             </div>

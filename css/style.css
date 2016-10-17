@@ -106,7 +106,7 @@ p.parrafo {
 }
 .logo img {
     max-height: 100px;
-    margin: 10px 0;
+    margin: 0;
 }
 .menu {
     margin: 0;
@@ -116,7 +116,6 @@ p.parrafo {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    float: right;
     font-size: 1.4em;
     display: block;
     font-family: 'Raleway', sans-serif;
@@ -134,7 +133,7 @@ p.parrafo {
     text-align: center;
     vertical-align: middle;
     text-transform: capitalize;
-    transition: border 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: inherit;
 }
@@ -144,27 +143,24 @@ p.parrafo {
 .menu a:last-child {
     border-width: 0 0 2px 0;
 }
-.vcenter {
-    position: relative;
-    top: 50%;
-    transform: translateY(65%);
+.menu a:hover {
+    border-bottom-color: #25AAE3;
 }
-.border-cyan:hover {
-    border-bottom: solid 2px #25AAE3 !important;
+.menu a.borde-magenta:hover {
+    border-bottom-color: #E92A6F;
 }
-.border-magenta:hover {
-    border-bottom: solid 2px #E92A6F !important;
+.menu a.current {
+    border-bottom-color: #25AAE3;
 }
-@media (max-width: 1024px) {
-    .menu ul {
-        text-align: center;
-    }
+.menu a.borde-magenta.current {
+    border-bottom-color: #E92A6F;
 }
 
 /*estilo carusel*/
 
 .carousel {
     height: 400px;
+    margin-top: 15px;
 }
 .carousel-cell {
     width: 100%;
@@ -175,14 +171,38 @@ p.parrafo {
     width: 100%;
     height: 100%;
 }
-.parent {
-    display: table;
-    table-layout: fixed;
+.carousel-cell h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    z-index: 10000;
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    display: block;
+    font-size: 2em;
+    padding: 10px 10px 15px 15px;
+    background: #E92A6F;
+    -webkit-box-shadow: inset 5px -5px 0px 0px rgba(37, 170, 227, 1);
+    -moz-box-shadow: inset 5px -5px 0px 0px rgba(37, 170, 227, 1);
+    box-shadow: inset 5px -5px 0px 0px rgba(37, 170, 227, 1);
+    border-radius: 3px 0 0 3px;
+    max-width: 450px;
 }
-.child {
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+.vertical-align > [class^="vcenter col-"],
+.vertical-align > [class*=" vcenter col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+@media (max-width: 767px) {
+    .row.vertical-align {
+        display: block;
+    }
 }
 
 /*******************
@@ -256,28 +276,40 @@ a.more {
 }
 
 /*******************
-******donativos*****
+*****como ayudar****
 *******************/
 
+.donativo {
+    display: block;
+    text-align: center;
+}
+.donativo:hover,
+.donativo:focus {
+    text-decoration: none;
+}
+.donativo * {
+    transition: all 0.3s ease;
+}
 .donativo img {
-    margin: auto;
-    min-height: 150px;
-}
-.circle {
-    height: 300px;
-    width: 300px;
-    background: #25AAE3;
-    border-radius: 10000px;
-    margin: auto;
-}
-.magenta.circle {
-    background: #E92A6F;
+    width: 100%;
+    max-width: 300px;
 }
 .donativo h2 {
     font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
+    font-weight: 400;
     color: #25AAE3;
     text-align: center;
+    padding-bottom: 5px;
+    border-bottom: solid 2px transparent;
+}
+.donativo h2.magenta {
+    color: #E92A6F;
+}
+.donativo:hover h2 {
+    border-bottom: solid 2px #E92A6F;
+}
+.donativo:hover h2.magenta {
+    border-bottom: solid 2px #25AAE3;
 }
 
 /*******************
@@ -388,11 +420,8 @@ a.more {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-}
-.form-group label,
-input,
-button {
-    font-family: 'Raleway', sans-serif;
+    border: solid 2px #E92A6F !important;
+    border-radius: 3px;
 }
 
 /*******************
@@ -410,6 +439,7 @@ button {
     font-size: 3em;
     text-align: center;
     text-transform: capitalize;
+    margin-top: 15px;
 }
 .publicacion h4 {
     font-family: 'Raleway', sans-serif;
@@ -442,3 +472,64 @@ button {
 /*******************
 *******videos*******
 *******************/
+
+h2.titulo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 2.1em;
+    margin: 15px 0;
+    color: #25AAE3;
+}
+
+/*******************
+*******Modales******
+*******************/
+
+.modal-content {
+    border-radius: 4px;
+}
+.help-head {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.6em;
+    color: #E92A6F;
+    text-align: center;
+    border-bottom: solid 3px #25AAE3;
+    padding: 10px;
+}
+.help-body {
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+    color: #4d4d4d;
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 15px;
+}
+.close {
+    color: #E92A6F;
+    opacity: 0.5;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+.close:hover,
+.close:focus {
+    color: #E92A6F;
+    opacity: 1
+}
+
+/*******************
+******Formulario****
+*******************/
+
+.form-manitas {}
+.form-manitas * {
+    font-family: 'Raleway', sans-serif;
+}
+.form-manitas label {
+    color: #E92A6F;
+}
+.form-manitas input,
+.form-manitas textarea {
+    border-color: #25AAE3;
+    border-radius: 2px;
+}

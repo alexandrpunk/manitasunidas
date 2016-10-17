@@ -17,16 +17,22 @@ require_once 'mod/head.php';
                 </a>                               
             </cms:folders>
             </div>
+            <hr>
             <div class="text-center"><a class="gal-link" href="galeria">Ver el resto de las fotografias</a></div>
-        </div>
-        <div class="row">
             <h1 class="titulo decor"><span>Videos</span></h1>
-            <div class="col-md-3 folder-g">
-                <img src="http://placehold.it/200/E92A6F/ffffff" class="img-responsive">
-                <h2 class="color-cyan">Video 1</h2>
-            </div>
+            <div class="row">
+        <cms:pages masterpage="videos.php" limit='4'>
+                <div class="col-md-3">
+                    <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<cms:show video />" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+        </cms:pages> 
         </div>
+        <hr>
+         <div class="text-center"><a class="gal-link" href="videos">Ver el resto de los videos</a></div>
     </div>
+        </div>
     <?php require_once 'mod/footer.php';?>
 </body>
 
