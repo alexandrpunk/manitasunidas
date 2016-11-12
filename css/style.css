@@ -16,25 +16,17 @@ body {
 .footer {
     position: absolute;
     bottom: 0;
-    padding: 15px 0 0;
+    padding: 10px 0 10px;
     width: 100%;
     border-top: 5px solid #E92A6F;
-    /* Set the fixed height of the footer here */
-    /*            max-height: 185px;*/
     background-color: #25AAE3;
-    -webkit-box-sizing: border-box;
-    /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;
-    /* Firefox, other Gecko */
-    box-sizing: border-box;
-    /* Opera/IE 8+ */
     -webkit-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Raleway', sans-serif;
 }
 .footer .logo {
-    max-height: 65px;
-    margin-bottom: 10px;
+    max-height: 60px;
 }
 .socials p {
     color: #fff;
@@ -44,19 +36,22 @@ body {
 .footer address {
     text-align: center;
     color: #fff;
-    font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
     margin: 0;
     padding: 0;
 }
-p.copyright {
-    /*            background: #E92A6F;*/
+.footer a {
+    color: #fff;
+    font-weight: bolder;
+}
+.copyright {
     color: #fff;
     margin: 0;
-    padding: 0 0 5px;
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
     font-size: 1.1em;
+    text-align: center;
+    display: block;
 }
 .print {
     border: 1px solid red;
@@ -202,6 +197,9 @@ p.parrafo {
 @media (max-width: 767px) {
     .row.vertical-align {
         display: block;
+    }
+    .copyright {
+        padding: 10px 0 0;
     }
 }
 
