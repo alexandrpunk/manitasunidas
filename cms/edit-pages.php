@@ -8,8 +8,8 @@
         var $persist_params = null;
         var $arr_config = null;
 
-        function KPagesAdmin(){
-            parent::KBaseAdmin();
+        function __construct(){
+            parent::__construct();
         }
 
         /////// 1. 'list' action ////////////////////////////////////////////////////
@@ -815,7 +815,7 @@
                 $FUNCS->validate_nonce( 'edit_page_' . $obj_id, $nonce );
             }
             else{
-                $FUNCS->dispatch_event( 'pages_rt_filter_resolve_page', array($tpl, &$tpl_id, &$page_id, $nonce) );
+                $FUNCS->dispatch_event( 'pages_rt_filter_resolve_page', array($tpl, &$tpl_id, &$page_id, $nonce, $act) );
             }
 
             // set page object
@@ -883,10 +883,10 @@
 
     class KNestedPagesAdmin extends KPagesAdmin{
 
-        function KNestedPagesAdmin(){
+        function __construct(){
             global $FUNCS;
 
-            parent::KPagesAdmin();
+            parent::__construct();
             $FUNCS->add_event_listener( 'alter_render_vars_content_list_inner', array($this, '_alter_render_vars') );
         }
 
@@ -1077,10 +1077,10 @@
 
     class KGalleryPagesAdmin extends KPagesAdmin{
 
-        function KGalleryPagesAdmin(){
+        function __construct(){
             global $FUNCS;
 
-            parent::KPagesAdmin();
+            parent::__construct();
             $FUNCS->add_event_listener( 'alter_render_vars_filter_folders', array($this, '_alter_render_vars') );
             $FUNCS->add_event_listener( 'alter_render_vars_content_list_inner', array($this, '_alter_render_vars') );
         }

@@ -43,7 +43,7 @@
         var $items_deleted = array();
         var $items_inserted = array();
 
-        function handle_params( $params ){
+        static function handle_params( $params ){
             global $FUNCS, $AUTH;
             if( $AUTH->user->access_level < K_ACCESS_LEVEL_SUPER_ADMIN ) return;
 
@@ -429,7 +429,7 @@
         }
 
         //////////////// Tags //////////////////////////////////////////////////
-        function related_pages_handler( $params, $node ){
+        static function related_pages_handler( $params, $node ){
             global $CTX, $FUNCS, $TAGS, $PAGE, $DB;
 
             extract( $FUNCS->get_named_vars(
@@ -492,7 +492,7 @@
             return $html;
         }
 
-        function reverse_related_pages_handler( $params, $node ){
+        static function reverse_related_pages_handler( $params, $node ){
             global $CTX, $FUNCS, $TAGS, $PAGE, $DB;
 
             extract( $FUNCS->get_named_vars(
@@ -642,7 +642,7 @@
     // UDF for outputting a link that lists reverse related pages in admin-panel
     class ReverseRelation extends KUserDefinedField{
 
-        function handle_params( $params ){
+        static function handle_params( $params ){
             global $FUNCS, $AUTH;
             if( $AUTH->user->access_level < K_ACCESS_LEVEL_SUPER_ADMIN ) return;
 

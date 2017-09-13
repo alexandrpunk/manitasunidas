@@ -1,65 +1,114 @@
 <?php require_once 'cms/cms.php'; ?>
 <cms:template title='Nosotros' />
+
+<cms:repeatable name='equipo' order='5'>
+    <cms:editable type='image'
+                  name='foto_miembro'
+                  label='fotografia'
+                  desc='Fotografia del miembro del equipo'
+                  show_preview='1'
+                  preview_height='200'
+    />
+    <cms:editable type='text'
+                  name='Nombre'
+                  label='Nombre'
+                  desc='Nombre del miembro del equipo'
+    />
+    <cms:editable type='text'
+                  name='Titulo'
+                  label='Titulo'
+                  desc='Titulo del miembro del equipo'
+    />
+    <cms:editable type='text'
+                  name='Puesto'
+                  label='Puesto'
+                  desc='Puesto del miembro del equipo'
+    />
+</cms:repeatable>
+
+<cms:repeatable name='servicios' order='6'>
+    <cms:editable type='image'
+                  name='imagen_servicio'
+                  label='imagen'
+                  desc='Imagen descriptiva del servicio'
+                  show_preview='1'
+                  preview_height='200'
+    />
+    <cms:editable type='text'
+                  name='nombre'
+                  label='Nombre del servicio'
+                  desc='Nombre del servicio'
+    />
+    <cms:editable type='text'
+                  name='descripcion'
+                  label='Descripcion del servicio'
+                  desc='Descripcion del servicio'
+    />
+    />
+</cms:repeatable>
+
 <?php require_once 'mod/head.php'; ?>
 </head>
 <body>
+    <?php require_once 'mod/menu.php';?>
     <div class="container">
-        <?php require_once 'mod/menu.php';?>
         <h1 class="titulo decor"><span>Nosotros</span></h1>
         <div class="row vertical-align">
             <div class="vcenter col-md-7 col-sm-12">
                 <p class="parrafo">
-                     <cms:editable name='nosotros' label='Editar la historia de nostros' type='nicedit'>
-                        A lo largo de nuestra historia se han sumado un gran número de personas a nuestros propósitos, desde aquellas que lideran grandes empresas hasta quienes poseen un alto nivel de conocimientos en materias de salud y tecnología, sin olvidarnos del diverso cuerpo de trabajadores voluntarios que, sumando esfuerzos, hacen posible que nos encontremos cerca de la conclusión del desarrollo de dispositivos, volviéndonos capaces de entregarlos a la comunidad de personas con capacidades diferentes, necesitada de atención y tecnología adaptable a sus circunstancias, lo antes posible.
-                    </cms:editable>
+                     <cms:editable name='nosotros' label='Editar la historia de nostros' type='textarea' order='1' />
                 </p>
             </div>
             <div class="vcenter col-md-5 col-sm-12">
-                <img class="img-responsive img-thumbnail center-block" src="<cms:editable name='imagen_nosotros' label='Imagen que va junto al texto de nosotros' type='image'></cms:editable>">
+                <img class="img-responsive img-thumbnail center-block" src="<cms:editable name='imagen_nosotros' label='Imagen que va junto al texto de nosotros' type='image' />">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <h1 class="titulo decor"><span>Mision</span></h1>
+            <div class="col-md-4">
+                <h1 class="titulo"><span>Mision</span></h1>
                 <p class="parrafo text-center">
-                    <cms:editable name='mision' label='Editar la mision' type='nicedit'>
-                        Incorporar a personas con discapacidad física, a una vida digna y respeto social, mediante la donación de dispositivos medico tecnológicos que aumentan su calidad de vida.
-                    </cms:editable>
-                </p>
-
-                <h1 class="titulo decor"><span>Vision</span></h1>
-                <p class="parrafo text-center">
-                    <cms:editable name='vision' label='Editar la vision' type='nicedit'>
-                        Ser una fundación líder en donación de dispositivos electrónicos de alta calidad y funcionalidad, producidos con materiales y tecnologías de última generación que den soluciones a personas con alguna discapacidad.
-                    </cms:editable>
+                    <cms:editable name='mision' label='Editar la mision' type='textarea' order='2' />
                 </p>
             </div>
-            <div class="col-md-6">
-                <h1 class="titulo decor"><span>Valores</span></h1>
-                <div class="contenedor-flex">
-                    <div class="valores">
-                        <img class="child img-responsive center-block" src="img/liderazgo.svg">
-                        <p>Liderazgo</p>
-                    </div>
-                    <div class="valores">
-                        <img class="img-responsive center-block" src="img/familia.svg">
-                        <p>Familia</p>
-                    </div>
-                    <div class="valores">
-                        <img class="child img-responsive center-block" src="img/calidad.svg">
-                        <p>Calidad</p>
-                    </div>
-                    <div class="valores" style="margin-left:70px;">
-                        <img class="child img-responsive center-block" src="img/solidaridad.svg">
-                        <p>Solidaridad</p>
-                    </div>
-                    <div class="valores" style="margin-right:70px;">
-                        <img class="child img-responsive center-block" src="img/fidelizacion.svg">
-                        <p>Fidelización</p>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <h1 class="titulo"><span>Vision</span></h1>
+                <p class="parrafo text-center">
+                    <cms:editable name='vision' label='Editar la vision' type='textarea' order='3' />
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h1 class="titulo"><span>Valores</span></h1>
+                <p class="parrafo text-center">
+                    <cms:editable name='valores' label='Editar los valores' type='textarea' order='4' />
+                </p>
             </div>
         </div>
+        
+        <h1 class="titulo">Nuestro equipo de trabajo</h1>
+        <div class="row">
+            <cms:show_repeatable 'equipo' >
+                <div class="col-md-4 col-sm-4 miembro">
+                    <div class="foto" style="background-image:url(<cms:show foto_miembro />);"></div>
+                    <h5><cms:show Nombre /></h5>
+                    <p><cms:show Titulo /></p>
+                    <p><small><cms:show Puesto /></small></p>
+                </div>
+            </cms:show_repeatable>
+        </div>
+        
+        <h1 class="titulo">Nuestros servicios</h1>
+        <div class="row">
+            <cms:show_repeatable 'servicios' >
+                <div class="col-md-4">
+                <div class="tablon ">
+                    <img src="<cms:show imagen_servicio />">
+                    <h3><cms:show nombre /></h3>
+                    <p><cms:show descripcion /></p>
+                </div>
+            </div>
+            </cms:show_repeatable>
+        </div>
+        
     </div>
     <?php require_once 'mod/footer.php';?>
 </body>

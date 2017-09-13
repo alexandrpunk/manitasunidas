@@ -39,7 +39,7 @@
     // MySQL settings. You need to get this info from your web host.
     // 4.
     // Name of the database
-    define( 'K_DB_NAME', 'manitas' );
+    define( 'K_DB_NAME', '3dsolutions' );
     // 5.
     // Database username
     define( 'K_DB_USER', 'root' );

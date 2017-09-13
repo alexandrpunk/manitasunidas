@@ -8,7 +8,7 @@
     <meta name="author" content="Jesus Alejandro Sandoval Lopez">
     <link rel="shortcut icon" href="img/favicon.ico">
     <title>
-        Manitas Unidas -
+        3D Solutions -
         <?php
         if(isset($titulo)){
             echo $titulo;
